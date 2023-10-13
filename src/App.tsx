@@ -1,12 +1,14 @@
-import './App.css'
-
-import Landing from './pages/Landing'
+// import React from "react";
+import Header from "./components/Header";
+import Body from "./components/Body";
 
 function App() {
-
   return (
-    <Landing />
-  )
+    <>
+      <Header />
+      <Body />
+    </>
+  );
 }
 
-export default App
+export default App;
