@@ -4,6 +4,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { MainButton1 } from "./style/Landing.styled";
 
 const Body = styled.div`
   background-color: #fefafa;
@@ -15,14 +16,15 @@ const Body = styled.div`
 const LeftContent = styled.div`
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 0.5;
+  margin-right: 20px;
+  margin-bottom: 170px;
 `;
 
 const SocialIcons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px;
   color: #002d5b;
 `;
 
@@ -42,16 +44,22 @@ const Description = styled.p`
   font-size: 16px;
   color: #666;
   margin: 10px 0;
+  max-width: 500px; /* Set a maximum width for the text to wrap */
 `;
 
 const MiddleContent = styled.div`
   flex: 1;
+  margin: 15px 0;
+`;
+
+const Space = styled.div`
+  flex: 21;
+  margin: 20px 0;
 `;
 
 const PlaceholderPhoto = styled.img`
   width: 400px;
   height: auto;
-  border: 2px solid #ccc;
   border-radius: 10px;
 `;
 
@@ -61,17 +69,8 @@ const SocialIcon = styled.a`
   text-decoration: none;
   display: flex;
   align-items: center;
-  margin: 5px 0;
+  margin: 10px 0;
   gap: 10px;
-`;
-
-const LearnMoreButton = styled.button`
-  background-color: #ec5b53;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 `;
 
 const Landing: React.FC = () => {
@@ -92,20 +91,24 @@ const Landing: React.FC = () => {
             <InstagramIcon />
           </SocialIcon>
         </SocialIcons>
-        <NameDescription>
-          <Name>I'm Web Developer</Name>
-          <Name>Johannes Xerxes Dalogdog</Name>
-          <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus luctus nec ullamcorper mattis, pulvinar dapibus leop
-            ullamcorper, lorem ipsum.
-          </Description>
-          <MiddleContent>
-            <LearnMoreButton>Learn more</LearnMoreButton>
-          </MiddleContent>
-        </NameDescription>
+        <Space />
       </LeftContent>
-      <PlaceholderPhoto src="placeholder.jpg" alt="Placeholder Photo" />
+      <NameDescription>
+        <Name>I'm Web Developer</Name>
+        <Name>Natalie E. Watson</Name>
+        <Description>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+          tellus luctus nec ullamcorper mattis, pulvinar dapibus leop
+          ullamcorper, lorem ipsum.
+        </Description>
+        <MiddleContent>
+          <MainButton1>Learn more</MainButton1>
+        </MiddleContent>
+      </NameDescription>
+      <PlaceholderPhoto
+        src="https://websitedemos.net/personal-portfolio-02/wp-content/uploads/sites/770/2022/02/h1_hero-bg.png"
+        alt="Placeholder Photo"
+      />
     </Body>
   );
 };
