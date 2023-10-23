@@ -94,8 +94,7 @@ const Landing: React.FC = () => {
         <Space />
       </LeftContent>
       <NameDescription>
-        <Name>I'm Web Developer</Name>
-        <Name>Natalie E. Watson</Name>
+        <Name>I'm Web Developer Natalie E. Watson</Name>
         <Description>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
           tellus luctus nec ullamcorper mattis, pulvinar dapibus leop

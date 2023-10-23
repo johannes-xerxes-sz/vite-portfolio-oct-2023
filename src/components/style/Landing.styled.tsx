@@ -11,6 +11,7 @@ export const SectionDescription = styled.p`
   font-size: 16px;
   color: #666; /* Adjust the color as needed */
   margin: 20px auto;
+  max-width: 500px;
 `;
 
 export const MainButton1 = styled.button`

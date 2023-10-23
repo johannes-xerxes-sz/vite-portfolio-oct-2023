@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { SectionTitle, SectionDescription } from "./style/Landing.styled";
+import {
+  SectionTitle,
+  SectionDescription,
+  MainButton1,
+} from "./style/Landing.styled";
 
 const AboutContainer = styled.div`
   text-align: center;
@@ -10,46 +14,56 @@ const AboutContainer = styled.div`
 
 const Divider = styled.hr`
   width: 5%;
-  margin: 20px auto;
-  margin-left: 20px; /* Add margin to the right */
-  border: 1px solid #ec5b53; /* Divider line style */
+  margin: 10px auto;
+  margin-left: 0px;
+  border: 1px solid #ec5b53;
 `;
+
 const DividerTitle = styled.hr`
   width: 7%;
   margin: 20px auto;
-  border: 1px solid #ec5b53; /* Divider line style */
+  border: 1px solid #ec5b53;
   margin-bottom: 50px;
 `;
 
 const LeftSide = styled.div`
-  text-align: left; /* Align text to the left for the left side */
+  text-align: left;
 `;
 
 const Subtitle = styled.h4`
-  font-size: 24px;
+  font-size: 30px;
   font-family: "Playfair Display", serif;
-  color: #002d5b; /* Adjust the color as needed */
-  margin: 10px 0; /* Remove margin: auto */
-  max-width: 400px; /* Set a maximum width for the text to wrap */
+  color: #002d5b;
+  margin: 10px 0;
+  max-width: 400px;
 `;
 
-const DualDescriptions = styled.p`
-  text-align: left;
+const DualDescriptions = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Description = styled.p`
   font-size: 16px;
-  color: #666; /* Adjust the color as needed */
-  margin: 20px auto;
-  max-width: 200px; /* Set a maximum width for the text to wrap */
+  color: #666;
+  margin: 20px 0;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  max-width: 500px;
 `;
 
-// const LeftDescription = styled.p`
-//   flex: 1;
-//   margin: 10px;
-// `;
+const PhotoContainer = styled.div`
+  position: relative;
+  background-color: #ec5b53;
+  padding: 10px;
+  border-radius: 10px;
+`;
 
-// const RightDescription = styled.p`
-//   flex: 1;
-//   margin: 10px;
-// `;
+const PlaceholderPhoto = styled.img`
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+`;
 
 const About: React.FC = () => {
   return (
@@ -65,11 +79,26 @@ const About: React.FC = () => {
         </Subtitle>
         <Divider />
         <DualDescriptions>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-          luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          <Description>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+            luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit.
+          </Description>
+          <Description>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit.
+          </Description>
+          <PhotoContainer>
+            <PlaceholderPhoto
+              src="https://websitedemos.net/personal-portfolio-02/wp-content/uploads/sites/770/2021/02/section-1-bg1.jpg"
+              alt="Placeholder Photo"
+            />
+          </PhotoContainer>
         </DualDescriptions>
+        <MainButton1>Contact Me</MainButton1>
       </LeftSide>
     </AboutContainer>
   );
