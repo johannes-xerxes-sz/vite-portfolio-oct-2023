@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  SectionTitle,
-  SectionDescription,
-} from "./style/Landing.styled";
+import { SectionTitle, SectionDescription } from "./style/Landing.styled";
 
 const ServicesContainer = styled.div`
   text-align: center;
@@ -74,7 +71,8 @@ const Services: React.FC = () => {
           <ServiceCircle />
           <ServiceTitle>Service 1</ServiceTitle>
           <ServiceDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </ServiceDescription>
           <ServiceArrow />
         </ServiceSquare>
@@ -82,7 +80,8 @@ const Services: React.FC = () => {
           <ServiceCircle />
           <ServiceTitle>Service 2</ServiceTitle>
           <ServiceDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </ServiceDescription>
           <ServiceArrow />
         </ServiceSquare>
@@ -90,7 +89,8 @@ const Services: React.FC = () => {
           <ServiceCircle />
           <ServiceTitle>Service 3</ServiceTitle>
           <ServiceDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </ServiceDescription>
           <ServiceArrow />
         </ServiceSquare>

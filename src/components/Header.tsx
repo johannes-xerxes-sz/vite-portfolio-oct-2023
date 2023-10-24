@@ -1,19 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import viteLogo from "/vite.svg"; // Make sure to adjust the path to your logo
+import MenuIcon from "@mui/icons-material/Menu";
+import { IconButton, Menu, MenuItem } from "@mui/material";
+import viteLogo from "/vite.svg"; // Adjust the path to your logo
 import { MainButton1 } from "./style/Landing.styled";
 
 const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px;
-  background-color: #fefafa; 
-  color: #fff;
-  padding-top: 15px;
-  padding-right: 30px;
-  padding-bottom: 15px;
-  padding-left: 30px;
+  padding: 20px 30px;
+  background-color: #fefafa;
+  color: #2b161b; // Adjust text color
 `;
 
 const Logo = styled.img`
@@ -24,11 +22,15 @@ const Logo = styled.img`
 const Navigation = styled.nav`
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: none; // Hide the navigation items on smaller screens
+  }
 `;
 
 const NavItem = styled.a`
   text-decoration: none;
-  color: #2B161B;
+  color: #2b161b;
   font-weight: inherit;
   cursor: pointer;
   font-family: inherit;
@@ -36,7 +38,27 @@ const NavItem = styled.a`
   padding: 0 1em;
 `;
 
+const MobileMenuButton = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block; /* Show the button on smaller screens */
+    position: absolute;
+    right: 10px;
+  }
+`;
+
 const Header: React.FC = () => {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <HeaderContainer>
       <div>
@@ -48,6 +70,28 @@ const Header: React.FC = () => {
         <NavItem>Portfolio</NavItem>
         <NavItem>Contact</NavItem>
       </Navigation>
+      <MobileMenuButton>
+        <IconButton
+          aria-controls="mobile-menu"
+          aria-haspopup="true"
+          onClick={handleClick}
+          color="inherit"
+        >
+          <MenuIcon />
+        </IconButton>
+        <Menu
+          id="mobile-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={handleClose}>Home</MenuItem>
+          <MenuItem onClick={handleClose}>About</MenuItem>
+          <MenuItem onClick={handleClose}>Portfolio</MenuItem>
+          <MenuItem onClick={handleClose}>Contact</MenuItem>
+        </Menu>
+      </MobileMenuButton>
       <MainButton1>Hire Me</MainButton1>
     </HeaderContainer>
   );

@@ -8,6 +8,11 @@ const Body = styled.div`
   display: flex;
   align-items: center;
   padding: 100px; /* Increase the padding to 20px on all sides */
+
+  @media (max-width: 768px) {
+    // display: none;
+    padding: 20px; /* Increase the padding to 20px on all sides */
+  }
 `;
 
 const LeftContent = styled.div`
@@ -16,6 +21,10 @@ const LeftContent = styled.div`
   flex: 0.5;
   margin-right: 20px;
   margin-bottom: 170px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const SocialIcons = styled.div`
@@ -23,6 +32,10 @@ const SocialIcons = styled.div`
   flex-direction: column;
   align-items: center;
   color: #002d5b;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const NameDescription = styled.div`
@@ -35,6 +48,9 @@ const Name = styled.h1`
   font-size: 65px;
   margin: 0;
   color: #002d5b;
+  @media (max-width: 768px) {
+    left: 100px;
+  }
 `;
 
 const Description = styled.p`
@@ -47,6 +63,10 @@ const Description = styled.p`
 const MiddleContent = styled.div`
   flex: 1;
   margin: 15px 0;
+  @media (max-width: 768px) {
+    flex: 0;
+    margin: 50px 0;
+  }
 `;
 
 const Space = styled.div`
@@ -58,6 +78,10 @@ const PlaceholderPhoto = styled.img`
   width: 400px;
   height: auto;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    display: none; // Hide the navigation items on smaller screens
+  }
 `;
 
 const SocialIcon = styled.a`

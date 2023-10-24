@@ -1,4 +1,3 @@
-// import React from "react";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import About from "./components/About";
@@ -10,103 +9,34 @@ import Testimonials from "./components/Testimonials";
 import Email from "./components/Email";
 import Footer from "./components/Footer";
 
-import styled from "styled-components";
+import { ColorContainer, WhiteContainer, FooterContainer } from "./components/style/Landing.styled";
 
-const MarginAppHeader = styled.div`
-  background-color: #fefafa;
-  padding-top: 15px;
-  padding-right: 100px;
-  padding-bottom: 15px;
-  padding-left: 100px;
-`;
-
-const MarginAppAbout = styled.div`
-  background-color: white;
-  padding-top: 15px;
-  padding-right: 100px;
-  padding-left: 100px;
-`;
-
-const MarginAppServices = styled.div`
-  background-color: #fefafa;
-  padding-top: 15px;
-  padding-right: 100px;
-  padding-bottom: 15px;
-  padding-left: 100px;
-`;
-
-const MarginAppWorkProcess = styled.div`
-  background-color: #fefafa;
-  padding-bottom: 15px;
-`;
-
-const MarginAppWorkExperience = styled.div`
-  background-color: #fefafa;
-  padding-top: 15px;
-  padding-right: 50px;
-  padding-bottom: 15px;
-  padding-left: 50px;
-`;
-
-const MarginAppMyPortfolio = styled.div`
-  background-color: #fefafa;
-  padding-top: 15px;
-  padding-right: 100px;
-  padding-bottom: 15px;
-  padding-left: 100px;
-`;
-
-const MarginAppTestimonials = styled.div`
-  background-color: #fefafa;
-  padding-top: 15px;
-  padding-right: 100px;
-  padding-bottom: 15px;
-  padding-left: 100px;
-`;
-const MarginAppEmail = styled.div`
-  background-color: white;
-  padding-top: 15px;
-  padding-right: 100px;
-  padding-bottom: 100px;
-  padding-left: 100px;
-`;
-
-const MarginAppFooter = styled.div`
-  background-color: #002d5b;
-  padding-top: 15px;
-  padding-bottom: 15px;
-`;
 function App() {
   return (
     <div>
-      <MarginAppHeader>
-        <Header />
+      <Header />
+      <ColorContainer>
         <Body />
-      </MarginAppHeader>
-      <MarginAppAbout>
+      </ColorContainer>
+      <WhiteContainer>
         <About />
-      </MarginAppAbout>
-      <MarginAppServices>
+      </WhiteContainer>
+      <ColorContainer>
         <Services />
-      </MarginAppServices>
-      <MarginAppWorkProcess>
+      </ColorContainer>
         <WorkProcess />
-      </MarginAppWorkProcess>
-      <MarginAppWorkExperience>
+      <ColorContainer>
         <WorkExperience />
-      </MarginAppWorkExperience>
-      <MarginAppMyPortfolio>
         <MyPortfolio />
-      </MarginAppMyPortfolio>
-      <MarginAppTestimonials>
         <Testimonials />
-      </MarginAppTestimonials>
-      <MarginAppEmail>
+      </ColorContainer>
+
+      <WhiteContainer>
         <Email />
-      </MarginAppEmail>
-      <MarginAppFooter>
+      </WhiteContainer>
+      <FooterContainer>
         <Footer />
-      </MarginAppFooter>
+      </FooterContainer>
     </div>
   );
 }

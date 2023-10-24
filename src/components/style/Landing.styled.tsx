@@ -26,4 +26,31 @@ export const MainButton1 = styled.button`
   padding-bottom: 15px;
   padding-left: 30px;
   line-height: 1em;
+
+  @media (max-width: 768px) {
+    position: absolute; /* Relative positioning for default display */
+    left: 100px;
+  }
+`;
+
+export const ColorContainer = styled.div`
+  background-color: #fefafa;
+  padding: 15px 100px;
+  @media (max-width: 768px) {
+    padding: 5px;
+  }
+`;
+
+export const WhiteContainer = styled.div`
+  background-color: white;
+  padding: 15px 100px;
+  padding-bottom: 100px;
+  @media (max-width: 768px) {
+    padding: 5px;
+  }
+`;
+
+export const FooterContainer = styled.div`
+  background-color: #002d5b;
+  padding: 15px;
 `;
