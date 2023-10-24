@@ -1,27 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import { SectionTitle, SectionDescription } from "./style/Landing.styled";
+import { SectionTitle, SectionDescription, DividerTitle } from "./style/Landing.styled";
 
 const WorkContainer = styled.div`
   text-align: center;
   padding: 20px;
   background-color: #fefafa;
-`;
 
-const DividerTitle = styled.hr`
-  width: 7%;
-  margin: 20px auto;
-  border: 1px solid #ec5b53;
-  margin-bottom: 20px;
+  @media (max-width: 768px) {
+  }
 `;
 
 const ExperienceContainer = styled.div`
   display: flex;
-  // flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 20px;
-  justify-content: space-between;
-  // max-width: 600px;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap; /* Allow experience boxes to wrap on smaller screens */
+    max-width: 900px; /* Limit the maximum width for better responsiveness */
+  }
 `;
 
 const ExperienceBox = styled.div`
@@ -35,6 +34,10 @@ const ExperienceBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Align content to the left */
+
+  @media (max-width: 768px) {
+    width: 100%; /* Expand experience boxes to full width on smaller screens */
+  }
 `;
 
 const ExperienceTitle = styled.p`
@@ -65,11 +68,10 @@ const ProgressFill = styled.div`
   width: 80%;
   border-top-left-radius: 10px; /* Rounded left edge */
   border-bottom-left-radius: 10px; /* Rounded left edge */
-  // text-align: left;
+  text-align: left;
   color: white;
   font-size: 12px; /* Smaller text size */
-  text-align: left;
-  padding-left: 30px;
+  padding-left: 10px; /* Adjust the padding */
 `;
 
 const Work: React.FC = () => {
@@ -103,7 +105,6 @@ const Work: React.FC = () => {
             <ProgressFill>Web Designer</ProgressFill>
           </ProgressBar>
         </ExperienceBox>
-        {/* Add more ExperienceBox sections for additional work experiences */}
       </ExperienceContainer>
       <ExperienceContainer>
         <ExperienceBox>

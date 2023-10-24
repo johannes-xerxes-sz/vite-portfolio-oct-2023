@@ -30,6 +30,18 @@ export const MainButton1 = styled.button`
   @media (max-width: 768px) {
     position: absolute; /* Relative positioning for default display */
     left: 100px;
+    margin: 10px;
+  }
+`;
+
+export const DividerTitle = styled.hr`
+  width: 7%;
+  margin: 20px auto;
+  border: 1px solid #ec5b53;
+  margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    width: 25%;
   }
 `;
 

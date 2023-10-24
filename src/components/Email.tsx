@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SectionTitle, SectionDescription, MainButton1 } from "./style/Landing.styled";
+import { SectionTitle, SectionDescription, DividerTitle } from "./style/Landing.styled";
 
 const EmailContainer = styled.div`
   text-align: center;
@@ -11,13 +11,6 @@ const EmailContainer = styled.div`
   align-items: center;
 `;
 
-const DividerTitle = styled.hr`
-  width: 7%;
-  margin: 20px auto;
-  border: 1px solid #ec5b53;
-  margin-bottom: 20px;
-`;
-
 const EmailInput = styled.input`
   width: 50%;
   padding: 10px;
@@ -25,7 +18,31 @@ const EmailInput = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 20px;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 300px; /* Limit the maximum input width for better readability */
+  }
+`;
+
+const SubscribeButton = styled.button`
+  background-color: #ec5b53;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  line-height: 1em;
+
+  @media (max-width: 768px) {
+    // position: absolute; /* Relative positioning for default display */
+    margin: 10px;
+  }
 `;
 
 const Email: React.FC = () => {
@@ -38,7 +55,7 @@ const Email: React.FC = () => {
       </SectionDescription>
       <DividerTitle />
       <EmailInput placeholder="Enter Email Address" />
-      <MainButton1>Subscribe</MainButton1>
+      <SubscribeButton>Subscribe</SubscribeButton>
     </EmailContainer>
   );
 };

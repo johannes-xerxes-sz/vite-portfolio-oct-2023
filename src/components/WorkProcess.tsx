@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-// import { SectionDescription } from "./style/Landing.styled";
+import { PlayCircleOutlined } from "@mui/icons-material";
 
 const WorkContainer = styled.div`
   text-align: center;
-  padding: 150px;
+  padding: 200px; /* Adjust the padding for better responsiveness */
   position: relative;
   background-image: url("https://websitedemos.net/personal-portfolio-02/wp-content/uploads/sites/770/2021/02/web-developer-bg-min.jpg");
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 768px) {
+    padding: 50px; /* Adjust the padding for better responsiveness */
+  }
 `;
 
 const BackgroundOverlay = styled.div`
@@ -21,16 +25,17 @@ const BackgroundOverlay = styled.div`
   height: 100%;
 `;
 
-const ServiceCircle = styled.div`
-  width: 50px;
-  height: 50px;
-  background-color: #ec5b53;
+
+const ServiceCircle = styled(PlayCircleOutlined)`
   border-radius: 50%;
-  margin: 0 auto;
+  margin: 20px auto;
+  color: white;
+  transform: scale(3);
+  cursor: pointer;
 `;
 
 const SectionTitle = styled.h3`
-  font-size: 40px;
+  font-size: 32px; /* Reduce font size for better responsiveness */
   font-family: "Playfair Display", serif;
   color: white; /* Adjust the color as needed */
   margin: 10px auto;
@@ -53,7 +58,7 @@ const Work: React.FC = () => {
     <WorkContainer>
       <BackgroundOverlay /> {/* Overlay for darkening the background image */}
       <WorkContent>
-      <ServiceCircle />
+        <ServiceCircle />
         <SectionTitle>Working Process</SectionTitle>
         <SectionDescription>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,

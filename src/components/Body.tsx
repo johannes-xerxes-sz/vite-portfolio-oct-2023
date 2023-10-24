@@ -7,7 +7,7 @@ const Body = styled.div`
   background-color: #fefafa;
   display: flex;
   align-items: center;
-  padding: 100px; /* Increase the padding to 20px on all sides */
+  padding: 50px; /* Increase the padding to 20px on all sides */
 
   @media (max-width: 768px) {
     // display: none;

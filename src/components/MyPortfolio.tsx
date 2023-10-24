@@ -1,18 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { SectionTitle, SectionDescription } from "./style/Landing.styled";
+import { SectionTitle, SectionDescription, DividerTitle } from "./style/Landing.styled";
 
 const PortfolioContainer = styled.div`
   text-align: center;
   padding: 20px;
   background-color: #fefafa;
-`;
-
-const DividerTitle = styled.hr`
-  width: 7%;
-  margin: 20px auto;
-  border: 1px solid #ec5b53;
-  margin-bottom: 50px;
 `;
 
 const ImageContainer = styled.div`
