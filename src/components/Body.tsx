@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import { LinkedIn, Facebook, Twitter, Instagram } from "@mui/icons-material";
 import { MainButton1 } from "./style/Landing.styled";
 
 const Body = styled.div`
@@ -79,16 +76,16 @@ const Landing: React.FC = () => {
       <LeftContent>
         <SocialIcons>
           <SocialIcon href="https://www.linkedin.com/">
-            <LinkedInIcon />
+            <LinkedIn />
           </SocialIcon>
           <SocialIcon href="https://www.facebook.com/">
-            <FacebookIcon />
+            <Facebook />
           </SocialIcon>
           <SocialIcon href="https://www.twitter.com/">
-            <TwitterIcon />
+            <Twitter />
           </SocialIcon>
           <SocialIcon href="https://www.instagram.com/">
-            <InstagramIcon />
+            <Instagram />
           </SocialIcon>
         </SocialIcons>
         <Space />
